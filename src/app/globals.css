@@ -70,3 +70,59 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.markdown-paragraph {
+  margin: 1em 0;
+  color: #333;
+}
+
+.markdown-heading {
+  color: #2c3e50;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3em;
+}
+
+.markdown-heading-1 {
+  font-size: 2.5em;
+}
+
+.markdown-heading-2 {
+  font-size: 2em;
+}
+
+.markdown-heading-3 {
+  font-size: 1.75em;
+}
+
+.markdown-blockquote {
+  border-left: 5px solid #8F77C8;
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+.inline-code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+pre[class*="language-"] {
+  margin: 20px 0px !important;
+  background: transparent !important;
+  color: #ffffff;
+  padding: 16px !important;
+  border-radius: 4px;
+  border: 1px solid #8F77C8 !important;
+}
+
+:not(pre) > code[class*="language-"] {
+  background: #f5f2f0 !important;
+}
+

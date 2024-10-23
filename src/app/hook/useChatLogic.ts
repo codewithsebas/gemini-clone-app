@@ -12,9 +12,10 @@ export const useChatLogic = () => {
     if (!message) return;
 
     setLoading(true);
-
+    setMessage("");
     try {
       const res = await axios.post("/api/gemini", { message });
+      
       if (res.data.candidates && res.data.candidates.length > 0) {
         const candidate = res.data.candidates[0];
 
@@ -41,8 +42,6 @@ export const useChatLogic = () => {
         );
         addMessage(message, "No se pudo obtener una respuesta válida.");
       }
-
-      setMessage("");
     } catch (error) {
       console.error("Error fetching response:", error);
       addMessage(message, "Error al obtener la respuesta");

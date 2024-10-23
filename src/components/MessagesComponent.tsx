@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { useChatLogic } from "@/app/hook/useChatLogic";
 import Skeleton from "./Skeleton";
 import { ResponseMessageProps } from "@/app/Interface/Messages";
+import MarkdownRenderer from "./MarkdownRenderer";
 
 const MessagesComponent: React.FC<ResponseMessageProps> = ({ loading }) => {
   const messagesContainerRef = useRef<HTMLDivElement>(null);
@@ -39,8 +40,8 @@ const MessagesComponent: React.FC<ResponseMessageProps> = ({ loading }) => {
                   width={35}
                   height={35}
                 />
-                <div className="w-full overflow-hidden">
-                  <p className="mt-2">{msg.answer}</p>
+                <div className="w-full overflow-hidden pe-3">
+                  <MarkdownRenderer answer={msg.answer} />
                 </div>
               </div>
             </div>
